@@ -19,6 +19,7 @@ gem 'ffi', '~> 1.14.2'
 gem 'jwt', '~> 2.2.2'
 gem 'active_model_serializers', '~> 0.10.12'
 gem 'will_paginate', '~> 3.3.0'
+gem 'faker', '~> 2.15.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -46,7 +47,6 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 4.4.1'
   gem 'factory_bot_rails', '~> 6.1.0'
-  gem 'faker', '~> 2.15.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

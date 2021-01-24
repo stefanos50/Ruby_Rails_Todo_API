@@ -52,14 +52,14 @@ RSpec.describe 'Todos API', type: :request do
   describe 'POST /todos' do
      let(:valid_attributes) do
       # send json payload
-      { title: 'Learn Elm', created_by: user.id.to_s }.to_json
+      { title: 'Fix the car', created_by: user.id.to_s }.to_json
     end
 
     context 'when request is valid' do
       before { post '/todos', params: valid_attributes, headers: headers }
 
       it 'creates a todo' do
-        expect(json['title']).to eq('Learn Elm')
+        expect(json['title']).to eq('Fix the car')
       end
 
       it 'returns status code 201' do
@@ -83,7 +83,7 @@ RSpec.describe 'Todos API', type: :request do
   end
 
   describe 'PUT /todos/:id' do
-    let(:valid_attributes) { { title: 'Shopping' }.to_json }
+    let(:valid_attributes) { { title: 'Supermarket Shopping' }.to_json }
 
     context 'when the record exists' do
       before { put "/todos/#{todo_id}", params: valid_attributes, headers: headers }
